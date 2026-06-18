@@ -1,0 +1,29 @@
+.box {
+    height: 100px;
+    width: 100px;
+}
+
+.rec {
+    height: 100px;
+    width: 200px;
+}
+
+#box1 {
+    background-color: red;
+}
+
+#box2 {
+    background-color: blue;
+    /* height: 100px;
+    width: 100px; */
+}
+
+#rec1 {
+    background-color: green;
+    /* height: 100px;
+    width: 200px; */
+}
+
+#rec2 {
+    background-color: yellow;
+}

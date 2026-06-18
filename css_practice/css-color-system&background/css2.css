@@ -1,0 +1,47 @@
+#first {
+    color: white;
+    background-color:red;
+}
+
+#second {
+    color:white;
+    background-color:green;
+}
+
+button{
+    color:white;
+    background-color:rgba(50,45,52,0.5);
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+}
+#box1 {
+    background-color:red;
+}
+#box2 {
+    background-color:green;
+}
+#box3 {
+    background-color:blue;
+}
+
+#icon {
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255,255,255,1);
+    background-image:url(CSS3_logo_and_wordmark.svg.png);
+    background-size: contain;
+    background-repeat:no-repeat;
+    border: 0px;
+}
+
+#inv1 {
+    background-color:green;
+    visibility: hidden;
+}
+
+#inv2 {
+    background-color: skyblue;
+}

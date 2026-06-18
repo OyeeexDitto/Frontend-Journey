@@ -1,0 +1,92 @@
+.box {
+  height: 100px;
+  width: 100px;
+  font-size: 20px;
+}
+
+.head {
+  text-align: center;
+}
+
+#box1 {
+  background-color: red;
+  text-align: left;
+}
+
+#box2 {
+  background-color: green;
+  text-align: center;
+}
+
+#box3 {
+  background-color: blue;
+  text-align: right;
+}
+
+#under {
+  text-decoration: underline;
+}
+
+#over {
+  text-decoration: overline;
+}
+
+#slice {
+  text-decoration: line-through;
+}
+
+#link {
+  text-decoration: none;
+}
+
+#dotted {
+  text-decoration-style: dotted;
+}
+
+#txt1 {
+  text-transform: uppercase;
+}
+
+#txt2 {
+  text-transform: lowercase;
+}
+
+#txt3 {
+  text-transform: capitalize;
+}
+
+#txt4 {
+  text-transform: none;
+}
+
+#first {
+  line-height: 6px;
+}
+
+#second {
+  line-height: 30px;
+}
+
+#fsize {
+  font-size: 20px;
+}
+
+#fweight {
+  font-weight: 900;
+}
+
+#fstyle {
+  font-style: oblique;
+}
+
+.article {
+  font-family: "Bitcount Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
