@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#fhead {
+    text-align: center;
+    color: red;
+}
+
+#padding {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(206, 9, 255);
+    /* padding: 2px; */
+    margin: 5px 5px 25px 5px;
+    /* or can also be done using padding:10px for all around equal padding. */
+}
+
+#marg {
+    height: 50px;
+    width: 50px;
+    background-color: aquamarine;
+    margin: 50px 5px 5px 5px;
+    /* margin is a gap between two elements and whichever elemnts margin is higher it will honor the highest margin  */
+}
+
+.pad {
+    height: 50px;
+    width: 50px;
+    padding: 2px;
+}
+
+#border {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    margin: 20px;
+    padding: 20px;
+    border: 5px dashed black;
+    border-radius: 60px;
+}
