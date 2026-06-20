@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font-size: 30px; */
+}
+
+.head {
+    text-align: center;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    background-color: olive;
+    padding: 2px;
+    margin: 5px;
+    border: 4px solid black;
+    /* display: block; It is default for block elements like div*/
+    /* display: inline; it is for in-line elements like span tag, anchor tag */
+     display: inline-block; /*Used for making inline block elements */
+}
+
+/* #box2 {
+    display: none; It removes/hides the element somewhat like visibility property.
+} */
+
+.div {
+    height: 400px;
+    width: 400px;
+    background-color: bisque;
+    font-size: 20px;
+}
+
+#perc {
+    background-color: blue;
+    height: 50%;
+    width: 50%;
+}
+
+#em {
+    background-color: blue;
+    height: 50%;
+    width: 70%;
+    font-size: 5em; /*2 em ,i.e, 20*2=40px*/
+}
+
+#rem {
+    background-color: blue;
+    height: 30%;
+    width: 50%;
+    font-size: 5rem; /*root elements */
+}
+
+.prop {
+    height: 50px;
+    width: 50px;
+    background-color: seagreen;
+    border: 3px solid black;
+    margin: 5px;
+}
+
+#prop1 {
+    position: static;
+}
+
+#prop2 {
+    position: relative;
+    top: 10px;
+    left: 55px;
+}
+
+#prop3 {
+    position: absolute;
+    top: 220%;
+    left: 10%;
+}
+
+#prop4 {
+    position: fixed;
+    bottom: 50px;
+}
+
+.box1, .box2 {
+    position: relative;
+    border: 3px solid black;
+    width: 100px;
+    height: 100px;
+    text-align: centre;
+    font-size: 25px;
+}
+
+.box1 {
+    background-color: red;
+    left: 20px;
+    top: 60px;
+    z-index: 2;
+}
+
+.box2 {
+    background-color: seagreen;
+    left: 60px;
+    top: 20px;
+    z-index: 1;
+}
