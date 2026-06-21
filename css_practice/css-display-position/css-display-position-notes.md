@@ -1,4 +1,4 @@
-Displa Property (Block/Inline elements) : 
+Display Property (Block/Inline elements) : 
 
 > Block Elements
 ● New Line: Start on a new line.
