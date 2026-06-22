@@ -1,71 +1,258 @@
-Display Property (Block/Inline elements) : 
+# DISPLAY, POSITION & RESPONSIVE UNITS
 
-> Block Elements
-● New Line: Start on a new line.
-● Full Width: Take up all horizontal space.
-● Styling: Can have margins and padding.
-● Size: Width and height can be set.
-● Examples: <div>, <p>, <h1>, <ul>, <li>.
+---
 
-> Inline Elements
-● Flow: Stay in line with text.
-● Width: Just as wide as the content.
-● No Break: No new line between elements.
-● Limited Styling: Can't set size easily.
-● Examples: <span>, <a>, <strong>, <em>.
+# Display Property
 
----------------------------------------------------------------x----------------------------------------------------------
+The `display` property determines how an HTML element is displayed on a webpage.
 
-Responsive Website :
+## Block Elements
 
-1. Adapts layout for different screen sizes
-2. Flexible layouts
-3. Optimizes images and assets
-4. Enhances user experience on mobile and
-desktop.
+### Characteristics
 
-> Relative Units (Percentage) - 
- 
-• Relative Sizing: Facilitates dynamic sizing relative to parents.
-• Adaptability: Ensures responsiveness across various screens.
-• Dimensions: Quickly set width and height as a percentage.
+* Start on a new line.
+* Occupy the full available width by default.
+* Width and height can be set.
+* Margins and padding work normally.
 
-> Relative Units (em) - 
+### Examples
 
-• Relative Unit: Sized relative to the parent element's font size.
-• Scalability: Facilitates easy scaling of elements for responsive design.
-• Font Sizing: Commonly used for setting font sizes adaptively.
+```html
+<div></div>
+<p></p>
+<h1></h1>
+<ul></ul>
+<li></li>
+```
 
-> Relative Units (rem) - 
+---
 
-• Relative Sizing: Facilitates dynamic sizing relative to root element.
-• Adaptability: Ensures responsiveness across various screens.
-• Dimensions: Quickly set width and height as a percentage.
+## Inline Elements
 
-> Relative Units (vw/vh) - 
+### Characteristics
 
-• Viewport Relative Units: Units based on viewport's width (vw) or height (vh) for
-responsive design.
-• Responsive Layouts: Essential for creating adaptive layouts; e.g., height: 100vh for
-full-screen sections.
-• Element Sizing: Useful for defining heights and widths that scale with the
-viewport.
+* Remain in the same line as surrounding content.
+* Only occupy the width required by their content.
+* Do not start on a new line.
+* Width and height cannot be set easily.
 
----------------------------------------------------x-----------------------------------------------------------------------------
-Position Property :
+### Examples
 
-• Static (default) : Elements follow the normal document flow. (top, right,
-bottom, left, z-index would not work)
-• Relative: Element's position adjusted from its normal position.
-• Absolute: Positions element relative to the nearest positioned ancestor.
-• Fixed: Element positioned relative to the viewport, does not move on scroll
+```html
+<span></span>
+<a></a>
+<strong></strong>
+<em></em>
+```
 
-> Position Property (z-index) - 
+---
 
-• Stacking Order: Determines the stacking order of elements along
-the Z-axis.
-• Position Context: Only applies to elements with position set to
-relative, absolute, fixed, or sticky.
-• Integer Values: Accepts integer values, including negative numbers.
-• Higher Values: An element with a higher z-index value appears
-above others.
+# Responsive Web Design
+
+A responsive website automatically adapts to different screen sizes and devices.
+
+### Benefits
+
+* Adapts layouts for different screen sizes.
+* Uses flexible layouts and units.
+* Optimizes images and assets.
+* Improves user experience on desktop, tablet, and mobile devices.
+
+---
+
+# Relative Units
+
+## Percentage (%)
+
+### Purpose
+
+Used to size elements relative to their parent element.
+
+### Benefits
+
+* Creates flexible layouts.
+* Helps build responsive designs.
+* Commonly used for width and height.
+
+### Example
+
+```css
+width: 50%;
+height: 50%;
+```
+
+---
+
+## EM Unit
+
+### Purpose
+
+Relative to the font size of the parent element.
+
+### Benefits
+
+* Scales with parent text size.
+* Useful for responsive typography.
+
+### Example
+
+```css
+font-size: 2em;
+```
+
+If the parent font size is `20px`:
+
+```text
+2em = 40px
+```
+
+---
+
+## REM Unit
+
+### Purpose
+
+Relative to the root (`html`) font size.
+
+### Benefits
+
+* Consistent sizing throughout a website.
+* Easier to manage than `em` in large projects.
+
+### Example
+
+```css
+font-size: 2rem;
+```
+
+If the root font size is `16px`:
+
+```text
+2rem = 32px
+```
+
+---
+
+## Viewport Units (vw / vh)
+
+### Purpose
+
+Relative to the viewport size.
+
+### Definitions
+
+* `1vw` = 1% of viewport width.
+* `1vh` = 1% of viewport height.
+
+### Uses
+
+* Full-screen sections.
+* Responsive layouts.
+* Dynamic sizing.
+
+### Example
+
+```css
+height: 100vh;
+width: 100vw;
+```
+
+---
+
+# Position Property
+
+The `position` property controls how an element is placed on a webpage.
+
+---
+
+## Static
+
+### Characteristics
+
+* Default position value.
+* Elements follow normal document flow.
+* `top`, `right`, `bottom`, `left`, and `z-index` do not work.
+
+```css
+position: static;
+```
+
+---
+
+## Relative
+
+### Characteristics
+
+* Element remains in normal document flow.
+* Can be moved relative to its original position.
+
+```css
+position: relative;
+top: 20px;
+left: 10px;
+```
+
+---
+
+## Absolute
+
+### Characteristics
+
+* Removed from normal document flow.
+* Positioned relative to the nearest positioned ancestor.
+
+```css
+position: absolute;
+top: 50px;
+left: 100px;
+```
+
+---
+
+## Fixed
+
+### Characteristics
+
+* Positioned relative to the viewport.
+* Remains visible even when the page is scrolled.
+
+```css
+position: fixed;
+bottom: 20px;
+right: 20px;
+```
+
+---
+
+# Z-Index
+
+The `z-index` property controls the stacking order of elements along the Z-axis.
+
+### Characteristics
+
+* Works only on positioned elements:
+
+  * relative
+  * absolute
+  * fixed
+  * sticky
+* Accepts positive and negative integer values.
+* Higher values appear above lower values.
+
+### Example
+
+```css
+.box1 {
+    z-index: 2;
+}
+
+.box2 {
+    z-index: 1;
+}
+```
+
+Result:
+
+```text
+box1 appears above box2
+```
