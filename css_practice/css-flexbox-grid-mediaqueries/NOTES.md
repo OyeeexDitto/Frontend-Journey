@@ -1,38 +1,137 @@
-FLEXBOX - GRID - MEDIA QUERIES -
+# FLEXBOX - GRID - MEDIA QUERIES
 
-> Float Property :
-• Element Alignment: Allows elements to be aligned to the left or right
-within their containing element.
+---
 
-• Values: Can take values like "left", "right", or "none" to determine the
-floating direction.
+## Float Property
 
-• Old Layout Technique: Less commonly used with the advent of Flexbox.
+### Purpose
 
+Used to align elements to the left or right within their parent container.
 
-FLEXBOX :
+### Values
 
-> FlexBox Direction :
-• Property Name: flex-direction is the property used to define the direction in a flex container.
+* `left` → Floats the element to the left.
+* `right` → Floats the element to the right.
+* `none` → Default value; element does not float.
 
-• Row Layout: row value aligns the flex items horizontally, in a left-to-right fashion.
+### Notes
 
-• Column Layout: column value stacks the flex items vertically, from top to bottom.
+* Commonly used in older website layouts.
+* Less frequently used today because Flexbox and Grid provide better layout control.
 
-• Reverse Direction: Adding -reverse to row or column (as in row-reverse or column-reverse) reverses
-the order of the items.
+---
 
+# FLEXBOX
 
-> Justify-Content property :
+## Flex Direction
 
-• Alignment: Aligns flex items along the main axis.
+### Purpose
 
-• flex-start: Items align to the start of the flex
-container.
+The `flex-direction` property defines the direction in which flex items are placed inside a flex container.
 
-• flex-end: Items align to the end of the flex container.
+### Values
 
-• Center: Items are cantered within the flex container.
+#### `row`
 
-• space-between/space-around/space-evenly:
-Distributes space between items evenly.
+* Default value.
+* Arranges items horizontally from left to right.
+
+#### `column`
+
+* Arranges items vertically from top to bottom.
+
+#### `row-reverse`
+
+* Arranges items horizontally from right to left.
+
+#### `column-reverse`
+
+* Arranges items vertically from bottom to top.
+
+### Example
+
+```css
+.container {
+    display: flex;
+    flex-direction: row;
+}
+```
+
+---
+
+## Justify Content
+
+### Purpose
+
+The `justify-content` property aligns flex items along the **main axis**.
+
+### Values
+
+#### `flex-start`
+
+* Items are aligned at the start of the container.
+
+#### `flex-end`
+
+* Items are aligned at the end of the container.
+
+#### `center`
+
+* Items are centered inside the container.
+
+#### `space-between`
+
+* Equal space between items.
+* No space at the edges.
+
+#### `space-around`
+
+* Equal space around items.
+* Edge spaces are smaller than the spaces between items.
+
+#### `space-evenly`
+
+* Equal spacing everywhere, including edges.
+
+### Example
+
+```css
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+```
+
+---
+
+## Key Flexbox Rule
+
+```text
+display: flex;
+        ↓
+Parent becomes Flex Container
+        ↓
+Direct children become Flex Items
+```
+
+### Example
+
+```html
+<div class="container">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+</div>
+```
+
+```css
+.container {
+    display: flex;
+}
+```
+
+Result:
+
+```text
+[Item 1] [Item 2] [Item 3]
+```

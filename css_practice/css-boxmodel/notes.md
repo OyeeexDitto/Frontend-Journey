@@ -1,50 +1,211 @@
-Box Model :
+# BOX MODEL
 
-In CSS that outllines the design and layout of elements on the web page.
+## Definition
 
-It consists of four main components - margin,border,padding and content.
+The CSS Box Model describes how every HTML element is displayed as a rectangular box on a webpage.
 
-> Margin  - It is the space outside the border,seperating the elements from others.
+It consists of four main components:
 
-> Border - It is the outline that encapsulates the padding and content.
+* Content
+* Padding
+* Border
+* Margin
 
-> Padding - The space between the border and the actual content, providing a buffer.
+```text
++-------------------------+
+|         Margin          |
+|  +-------------------+  |
+|  |      Border       |  |
+|  |  +-------------+  |  |
+|  |  |   Padding   |  |  |
+|  |  | +---------+ |  |  |
+|  |  | | Content | |  |  |
+|  |  | +---------+ |  |  |
+|  |  +-------------+  |  |
+|  +-------------------+  |
++-------------------------+
+```
 
-> Content - The innermost layer where text, images, or other media are housed.
---------------------x-------------------------
-Padding Property :
+### Components
 
-Usage - Defines the space between the content of an element and its border.
+#### Margin
 
-Individual Slides - Allows setting padding for individual sides using "padding-top","padding-right","padding-bottom" and "padding-left".
+The space outside the border that separates an element from other elements.
 
-Shorthand - Can use shorthand property padding to set all sides at once, e.g., padding: 10px 20px 10px 20px (top,right,bottom,left)
--------------------x--------------------------
-Margin Property :
+#### Border
 
-Functionality - Sets the space around elements, seperating them from other 
+The outline that surrounds the padding and content of an element.
 
-Individual Slides - Customizable for top,right,bottom and left sides.
+#### Padding
 
-Shorthand - Aloows quick setup, e.g., margin: 10px 20px (clockwise)
+The space between the content and the border.
 
-Auto value - Can be used for central alingment with auto value.
+#### Content
 
--------------------x--------------------------
-Border Propery :
+The innermost area that contains text, images, or other media.
 
-Usage - Creates an outline around HTML elements.
+---
 
-Components - Defined by width, style and color attributes.
+# Padding Property
 
-Styles - Includes options like solid, dashed, and dotted.
+## Purpose
 
-Shorthand - Can set attributes at once, e.g., border: 2px solid black.
+Defines the space between an element's content and its border.
 
-> Border Radius - 
+### Individual Sides
 
-Usage - Used to create rounded corners for elements.
+Padding can be applied separately to each side:
 
-Individual Corners - Allows setting different radii for each corner.
+```css
+padding-top
+padding-right
+padding-bottom
+padding-left
+```
 
-Shorthand - e.g., border-radius: 10px 20px
+### Shorthand
+
+```css
+padding: 10px;
+```
+
+Applies equal padding to all sides.
+
+```css
+padding: 10px 20px 10px 20px;
+```
+
+Order:
+
+```text
+Top → Right → Bottom → Left
+```
+
+---
+
+# Margin Property
+
+## Purpose
+
+Defines the space outside an element's border.
+
+### Individual Sides
+
+Margin can be applied separately to each side:
+
+```css
+margin-top
+margin-right
+margin-bottom
+margin-left
+```
+
+### Shorthand
+
+```css
+margin: 10px;
+```
+
+Applies equal margin to all sides.
+
+```css
+margin: 10px 20px;
+```
+
+Order:
+
+```text
+Top & Bottom → Left & Right
+```
+
+```css
+margin: 10px 20px 30px 40px;
+```
+
+Order:
+
+```text
+Top → Right → Bottom → Left
+```
+
+### Auto Value
+
+```css
+margin: auto;
+```
+
+Commonly used to center block-level elements horizontally.
+
+---
+
+# Border Property
+
+## Purpose
+
+Creates an outline around an HTML element.
+
+### Components
+
+A border consists of:
+
+* Width
+* Style
+* Color
+
+### Border Styles
+
+Common styles include:
+
+* solid
+* dashed
+* dotted
+* double
+
+### Shorthand
+
+```css
+border: 2px solid black;
+```
+
+---
+
+# Border Radius
+
+## Purpose
+
+Used to create rounded corners on elements.
+
+### Individual Corners
+
+Each corner can be styled separately:
+
+```css
+border-top-left-radius
+border-top-right-radius
+border-bottom-right-radius
+border-bottom-left-radius
+```
+
+### Shorthand
+
+```css
+border-radius: 10px;
+```
+
+Applies the same radius to all corners.
+
+```css
+border-radius: 10px 20px;
+```
+
+Applies different radii to corners.
+
+### Circle Example
+
+```css
+height: 100px;
+width: 100px;
+border-radius: 50%;
+```
+
+Creates a perfect circle.
