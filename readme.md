@@ -76,9 +76,9 @@ Box Model                ██████████
 Display                  ██████████
 Position                 ██████████
 Specificity              ██████████
-Flexbox Fundamentals     ███████░░░
-
-Grid                     ░░░░░░░░░░
+Flexbox                  ██████████
+Grid Basics              ██████████
+Media Queries            ██████████
 JavaScript               ░░░░░░░░░░
 React                    ░░░░░░░░░░
 ```
