@@ -82,25 +82,168 @@ The `justify-content` property aligns flex items along the **main axis**.
 #### `space-between`
 
 * Equal space between items.
-* No space at the edges.
+* No space at the container edges.
 
 #### `space-around`
 
 * Equal space around items.
-* Edge spaces are smaller than the spaces between items.
+* Edge spaces are smaller than spaces between items.
 
 #### `space-evenly`
 
-* Equal spacing everywhere, including edges.
+* Equal spacing everywhere, including the edges.
+
+---
+
+## Flex Wrap
+
+### Purpose
+
+Controls whether flex items stay on a single line or wrap onto multiple lines.
+
+### Values
+
+#### `nowrap`
+
+* Default value.
+* All items remain on a single line.
+
+#### `wrap`
+
+* Items move onto the next line when necessary.
+
+#### `wrap-reverse`
+
+* Items wrap in reverse order.
 
 ### Example
 
 ```css
 .container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 ```
+
+---
+
+## Align Items
+
+### Purpose
+
+Aligns flex items along the **cross axis** (perpendicular to the main axis).
+
+### Values
+
+#### `stretch`
+
+* Default value.
+* Items stretch to fill the container.
+
+#### `flex-start`
+
+* Items align to the start of the cross axis.
+
+#### `flex-end`
+
+* Items align to the end of the cross axis.
+
+#### `center`
+
+* Items are centered along the cross axis.
+
+---
+
+## Align Content
+
+### Purpose
+
+Controls the spacing between flex lines when there are multiple rows or columns of wrapped items.
+
+### Note
+
+* Only works when `flex-wrap: wrap` is enabled.
+* Similar to `justify-content`, but affects entire flex lines rather than individual items.
+
+---
+
+## Align Self
+
+### Purpose
+
+Allows an individual flex item to override the container's `align-items` property.
+
+### Example
+
+```css
+.item {
+    align-self: center;
+}
+```
+
+---
+
+## Flex Grow
+
+### Purpose
+
+Determines how much a flex item will grow relative to other items when extra space is available.
+
+### Example
+
+```css
+.item {
+    flex-grow: 1;
+}
+```
+
+### Notes
+
+* Default value is `0`.
+* Higher values grow more.
+
+---
+
+## Flex Shrink
+
+### Purpose
+
+Determines how much a flex item will shrink relative to other items when there is insufficient space.
+
+### Example
+
+```css
+.item {
+    flex-shrink: 1;
+}
+```
+
+### Notes
+
+* Default value is `1`.
+* Higher values shrink more.
+
+---
+
+## Order Property
+
+### Purpose
+
+Changes the visual order of flex items without changing the HTML structure.
+
+### Example
+
+```css
+.item {
+    order: 2;
+}
+```
+
+### Notes
+
+* Default value is `0`.
+* Lower values appear first.
+* Higher values appear later.
 
 ---
 
@@ -114,24 +257,36 @@ Parent becomes Flex Container
 Direct children become Flex Items
 ```
 
-### Example
+---
 
-```html
-<div class="container">
-    <div>Item 1</div>
-    <div>Item 2</div>
-    <div>Item 3</div>
-</div>
-```
+# CSS GRID
+
+## Definition
+
+CSS Grid is a two-dimensional layout system that allows developers to create layouts using rows and columns.
+
+### Features
+
+* Supports both rows and columns simultaneously.
+* Activated using `display: grid`.
+* Direct children become grid items.
+* Layout structure is defined using grid properties.
+* Individual units are called **grid cells**.
+
+### Example
 
 ```css
 .container {
-    display: flex;
+    display: grid;
 }
 ```
 
-Result:
+### Common Grid Properties
 
-```text
-[Item 1] [Item 2] [Item 3]
+```css
+grid-template-columns
+grid-template-rows
+gap
+grid-column
+grid-row
 ```
