@@ -290,3 +290,143 @@ gap
 grid-column
 grid-row
 ```
+# Media Queries
+
+## Definition
+
+Media Queries allow developers to apply different CSS styles based on specific device characteristics such as screen size, orientation, or resolution.
+
+They are essential for creating responsive websites that work well on desktops, tablets, and mobile devices.
+
+---
+
+## Purpose
+
+* Create responsive web designs.
+* Adapt layouts for different screen sizes.
+* Improve user experience across devices.
+* Apply styles only when certain conditions are met.
+
+---
+
+## Syntax
+
+```css
+@media (condition) {
+    /* CSS Rules */
+}
+```
+
+### Example
+
+```css
+@media (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+}
+```
+
+### Explanation
+
+```text
+Screen width ≤ 768px
+        ↓
+Apply the CSS rules inside the media query
+```
+
+---
+
+## Common Conditions
+
+### Max Width
+
+```css
+@media (max-width: 768px) {
+}
+```
+
+Applies styles when the screen width is **768px or smaller**.
+
+---
+
+### Min Width
+
+```css
+@media (min-width: 768px) {
+}
+```
+
+Applies styles when the screen width is **768px or larger**.
+
+---
+
+### Orientation
+
+```css
+@media (orientation: landscape) {
+}
+```
+
+Applies styles when the device is in landscape mode.
+
+---
+
+## Combining Conditions
+
+### AND Operator
+
+```css
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+```
+
+Both conditions must be true.
+
+---
+
+### Multiple Queries
+
+```css
+@media (max-width: 768px),
+       (orientation: portrait) {
+}
+```
+
+Applies styles when either condition is true.
+
+---
+
+## Practical Uses
+
+* Mobile navigation menus
+* Responsive layouts
+* Responsive typography
+* Image resizing
+* Tablet and mobile optimization
+
+---
+
+## Example
+
+```css
+/* Desktop */
+.container {
+    width: 800px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+```
+
+Result:
+
+```text
+Desktop → 800px width
+
+Mobile → 100% width
+```
