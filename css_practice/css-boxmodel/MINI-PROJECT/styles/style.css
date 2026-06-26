@@ -3,35 +3,58 @@
     padding: 0;
 }
 
-.card {
-    height: 50vh;
-    width: 80vh;
-    background-color: bisque;
-    margin-left: 65vh;
-    margin-top: 170px;
+#head {
+    text-align: center;
+
 }
 
-#prof {
-    text-align: center
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.main {
+    height: 50vh;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: column;
+    background-color: bisque;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 200px;
     width: 200px;
-    margin-top: 50px;
-    margin-left: 180px;
-    background-color: rgb(99, 96, 242);
-    border-radius: 100px;
+    background-color: seagreen;
+    border-radius: 50%;
+    text-align: center;
 }
 
-p {
-    text-align: bottom;
-    margin-top: 50px;
-    margin-left: 20px;
-
+.para {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
 }
 
-#button {
-    margin-left: 250px;
-    margin-top: 40px;
+#btn {
+    width: 100px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #d0fff6;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: skyblue;
 }
